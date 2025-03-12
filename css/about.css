@@ -1,0 +1,136 @@
+
+nav ul li.special a {
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #ff7300;
+    text-shadow: 0px 0px 5px #ffb300, 0px 0px 10px #cc9600, 0px 0px 20px #885600;
+}
+
+/* About Section Styling */
+.about {
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1; /* Makes sure the section takes up remaining space and pushes the footer down */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about h1 {
+    font-size: 50px;
+    font-family: 'Helvair Graffiti', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 150px;
+    color: #ff7300;
+}
+
+.about p {
+    font-size: 30px;
+    font-family: 'PP Right Gothic', sans-serif;
+    line-height: 1.8;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#artists {
+    background-color: #22222200;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#artists h2 {
+    font-size: 36px;
+    font-family: 'Helvair Graffiti', sans-serif;
+    margin-bottom: 40px;
+    color: #ff7300;
+}
+
+.artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 200px; /* Space between each artist */
+}
+
+.artist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    width: 80%; /* Set width for each artist */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.artist-photo {
+    width: 40%;
+}
+
+.artist-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.artist-info {
+    width: 60%;
+    color: white;
+}
+
+.artist-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.artist-info p {
+    font-size: 16px;
+}
+
+/* Staggered layout for Artist 2 */
+.artist-container .artist:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+
+/* Scroll to Top Button Styling */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c1000f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add glow effect */
+#scrollToTopBtn:hover {
+    background-color: #d62828;
+    box-shadow: 0 0 10px #ff5c5c, 0 0 20px #ff5c5c, 0 0 30px #ff5c5c, 0 0 40px #ff5c5c; /* Glowing effect */
+}
+
+#scrollToTopBtn:active {
+    transform: scale(0.95); /* Button scales down when clicked */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}

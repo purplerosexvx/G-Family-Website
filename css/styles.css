@@ -1,0 +1,166 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('https://media.giphy.com/media/3o7qE2KFaCY1xVIqu4/giphy.gif?cid=ecf05e47ouy79ho7an8rj9dvmmjlnhzl0pg0xhb7enubqswv&ep=v1_gifs_search&rid=giphy.gif&ct=g') center center/cover;
+}
+
+/* Navigation bar styling */
+/* Navigation bar styling */
+nav {
+    background-color: #33333333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-family: 'PP Right Gothic', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+nav ul li.special a {
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #ff0000;
+    text-shadow: 0px 0px 5px #ff0000, 0px 0px 10px #cc0000, 0px 0px 20px #880000;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 100vh;
+    background: url('https://media.giphy.com/media/3o7qE2KFaCY1xVIqu4/giphy.gif?cid=ecf05e47ouy79ho7an8rj9dvmmjlnhzl0pg0xhb7enubqswv&ep=v1_gifs_search&rid=giphy.gif&ct=g') center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Helvair Graffiti', sans-serif;
+    color: #b1000f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(181, 0, 0, 0.7);
+}
+
+.hero .logo img {
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #c1001038;
+    padding: 10px 200px;
+    font-family: 'PP Right Gothic', sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff000082;
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* For Edge, IE (Old versions may not support this) */
+body {
+    -ms-overflow-style: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #33333346;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Old English Five', sans-serif;
+    color: white;
+    margin-top: auto;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.325);
+    font-size: 18px;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+
+footer a:hover {
+    color: #e63946;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+}

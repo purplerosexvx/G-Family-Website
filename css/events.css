@@ -1,0 +1,101 @@
+
+nav ul li.special a {
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #00ffff;
+    text-shadow: 0px 0px 5px #00fff7, 0px 0px 10px #00c9cc, 0px 0px 20px #008883;
+}
+
+/* Events Section Styling */
+.events {
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.events h1 {
+    font-family: 'Helvair Graffiti', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 150px; /* Increase this value if it's still too high */
+    color: #00ffff;
+
+}
+
+.events p {
+    font-size: 50px;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'PP Right Gothic', sans-serif;
+}
+
+/* Event List Styling (Updated to make lines shorter) */
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the events */
+}
+
+.event-item {
+    width: 80%;  /* Adjust the width to make the lines shorter */
+    max-width: 800px;  /* Set a max-width for better control */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid #444; /* Line between events */
+    margin-bottom: 20px;
+    font-family: 'PP Right Gothic', sans-serif;
+}
+
+.event-item h3 {
+    font-size: 30px;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.event-item .date {
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .events h1 {
+        font-size: 28px;
+    }
+
+    .events p {
+        font-size: 16px;
+    }
+
+    .event-list {
+        padding-left: 20px;
+    }
+
+    .event-item {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

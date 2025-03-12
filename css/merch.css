@@ -1,0 +1,141 @@
+nav ul li.special a {
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #00ff2f;
+    text-shadow: 0px 0px 5px #00ff0d, 0px 0px 10px #18cc00, 0px 0px 20px #00880b;
+}
+
+/* Merch Section Styling */
+.merch {
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.merch h1 {
+    font-family: 'Helvair Graffiti', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+    color: #00ff2f;
+}
+
+.merch p {
+    font-size: 45px;
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Merch List Styling */
+.merch-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.merch-item {
+    width: 30%;  /* Adjust the width for each item */
+    max-width: 350px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border: 2px solid #444;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+}
+
+.merch-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.merch-item h3 {
+    font-size: 24px;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.merch-item p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.merch-item .price {
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.merch-item .btn {
+    background-color: #c1001038;
+    padding: 10px 40px;
+    font-family: 'PP Right Gothic', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.merch-item .btn:hover {
+    background-color: #ff000082;
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #33333346;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.325);
+    font-size: 18px;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+
+footer a:hover {
+    color: #e63946;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .merch h1 {
+        font-size: 28px;
+    }
+
+    .merch p {
+        font-size: 16px;
+    }
+
+    .merch-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .merch-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

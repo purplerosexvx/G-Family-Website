@@ -1,0 +1,149 @@
+nav ul li.special a {
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #ff0000;
+    text-shadow: 0px 0px 5px #ff0000, 0px 0px 10px #cc0000, 0px 0px 20px #880000;
+}
+
+/* Social Media Icons */
+.socials-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.socials-footer .social-icon img {
+    width: 35px;  /* Adjusted size to make them smaller */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.socials-footer .social-icon:hover img {
+    transform: scale(1.1);  /* Keep the hover effect */
+}
+
+
+/* Contact Section Styling */
+.contact {
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.contact h1 {
+    font-family: 'Helvair Graffiti', sans-serif;
+    font-size: 50px;
+    margin-bottom: 0;
+    color: #c1000f;
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
+
+.contact p {
+    font-size: 40px;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-family: 'PP Right Gothic', sans-serif;
+}
+
+/* Contact Logo Styling */
+.contact-logo {
+    text-align: center;
+    margin-top: 0;
+}
+
+.contact-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    color: #e63946;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e63946;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #e63946;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #d62828;
+}
+
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact h1 {
+        font-size: 28px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

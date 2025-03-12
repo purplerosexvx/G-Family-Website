@@ -1,0 +1,65 @@
+
+nav ul li.special a {
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #aa00ff;
+    text-shadow: 0px 0px 5px #d900ff, 0px 0px 10px #a000cc, 0px 0px 20px #520088;
+}
+
+/* Music Section Styling */
+.music {
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.music h1 {
+    font-family: 'Helvair Graffiti', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+    color: #aa00ff;
+}
+
+.music p {
+    font-size: 50px;
+    font-family: 'PP Right Gothic', sans-serif;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Embedded Music Player */
+.music-player iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 380px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .music h1 {
+        font-size: 28px;
+    }
+
+    .music p {
+        font-size: 16px;
+    }
+
+    .music-player iframe {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
