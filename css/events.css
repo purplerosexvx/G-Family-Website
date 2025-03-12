@@ -52,20 +52,21 @@ nav ul li.special a {
 }
 
 .event-item h3 {
+    font-family: 'PP Right Gothic', sans-serif;
     font-size: 30px;
-    color: #e63946;
+    color: #00ffff;
     margin-bottom: 10px;
 }
 
 .event-item p {
-    font-size: 16px;
+    font-size: 40px;
     color: #ccc;
     margin-bottom: 10px;
 }
 
 .event-item .date {
     font-size: 18px;
-    color: #e63946;
+    color: #00ffff;
     font-weight: bold;
 }
 
