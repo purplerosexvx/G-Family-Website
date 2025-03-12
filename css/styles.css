@@ -145,6 +145,10 @@ footer a:hover {
     color: #e63946;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
     nav ul {
