@@ -1,7 +1,7 @@
 /* Resetting default styles */
 * {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -17,7 +17,6 @@ body {
     background: url('https://media.giphy.com/media/3o7qE2KFaCY1xVIqu4/giphy.gif?cid=ecf05e47ouy79ho7an8rj9dvmmjlnhzl0pg0xhb7enubqswv&ep=v1_gifs_search&rid=giphy.gif&ct=g') center center/cover;
 }
 
-/* Navigation bar styling */
 /* Navigation bar styling */
 nav {
     background-color: #33333333;
@@ -75,7 +74,20 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    position: relative;
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;  /* Make sure it stays behind content */
+}
+
 
 .hero h1 {
     font-size: 50px;
@@ -102,26 +114,72 @@ nav ul li a:hover {
     color: rgb(0, 0, 0);
     border-radius: 5px;
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
     background-color: #ff000082;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Language Menu Dropdown with Flag Icons */
+.language-menu {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: inline-block;
+    z-index: 20;
+}
+
+.language-menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.language-menu:hover .language-menu-content {
+    display: block;
+}
+
+.language-menu-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.language-menu-content a:hover {
+    background-color: #ddd;
+}
+
+/* Hide scrollbars but allow scrolling */
+html, body {
+    overflow: scroll; /* Ensure scrolling works */
 }
 
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-    display: none;
+    display: none; /* Hide scrollbar */
 }
 
 /* For Firefox */
 html {
-    scrollbar-width: none;
+    scrollbar-width: none; /* Hide scrollbar */
 }
 
-/* For Edge, IE (Old versions may not support this) */
+/* For Edge, IE */
 body {
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+
+/* Flag icon styling */
+.flag-icon {
+    margin-right: 8px;
 }
 
 /* Footer Styling */
@@ -134,37 +192,3 @@ footer {
     margin-top: auto;
 }
 
-footer a {
-    color: rgba(255, 255, 255, 0.325);
-    font-size: 18px;
-    margin: 0 15px;
-    text-transform: uppercase;
-}
-
-footer a:hover {
-    color: #e63946;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-}

@@ -8,11 +8,23 @@
     <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/pp-right-gothic" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/helvair-graffiti" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    <!-- Flag Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.6.0/css/flag-icon.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
+                <!-- Language Menu Dropdown with Flag Icons on the left -->
+                <div class="language-menu">
+                    <a href="#"><span class="fi fi-gb"></span></a> <!-- Default Flag (USA) -->
+                    <div class="language-menu-content">
+                        <a href="?lang=en"><span class="fi fi-gb"></span>EN</a> <!-- English -->
+                        <a href="?lang=es"><span class="fi fi-es"></span>ES</a> <!-- Spanish -->
+                        <a href="?lang=ja"><span class="fi fi-jp"></span>JA</a> <!-- Japanese -->
+                    </div>
+                </div>                
                 <li class="special"><a href="about.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="music.html">Music</a></li>
@@ -29,12 +41,46 @@
         <div class="logo">
             <img src="images/G Family Logo (trns).png" alt="Your Band Logo" />
         </div>
-        <h1>Experience the Best</h1>
-        <a href="#music" class="btn">Listen Now</a>
+        <h1 id="hero-title">Experience the Best</h1>
+        <a href="#music" class="btn" id="listen-now-btn">Listen Now</a>
     </section>
     
     <footer>
-        <p>&copy; 2025 G Family. All rights reserved.</p>
+        <p id="footer-text">&copy; 2025 G Family. All rights reserved.</p>
     </footer>
+
+    <script>
+        const translations = {
+            en: {
+                heroTitle: "Experience the Best",
+                listenNowBtn: "Listen Now",
+                footerText: "© 2025 G Family. All rights reserved."
+            },
+            es: {
+                heroTitle: "Experimenta lo Mejor",
+                listenNowBtn: "Escuchar Ahora",
+                footerText: "© 2025 G Family. Todos los derechos reservados."
+            },
+            ja: {
+                heroTitle: "最高を体験",
+                listenNowBtn: "今すぐ聴く",
+                footerText: "© 2025 G Family. すべての権利を保有"
+            }
+        };
+
+        function setLanguage(lang) {
+            const content = translations[lang];
+            if (content) {
+                document.getElementById("hero-title").innerText = content.heroTitle;
+                document.getElementById("listen-now-btn").innerText = content.listenNowBtn;
+                document.getElementById("footer-text").innerText = content.footerText;
+            }
+        }
+
+        // Get language from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en'; // Default to English if no language is specified
+        setLanguage(lang);
+    </script>
 </body>
 </html>
