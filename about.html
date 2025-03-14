@@ -9,6 +9,7 @@
     <link href="https://fonts.cdnfonts.com/css/helvair-graffiti" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/pp-right-gothic" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -18,26 +19,36 @@
                 <li class="special"><a href="about.html">About</a></li>
                 <li><a href="music.html">Music</a></li>
                 <div class="logo">
-                    <a href="index.html" class="logo">
-                    <img src="images/G Family Logo (trns).png" alt="Your Band Logo">
+                    <a href="index.html">
+                        <img src="images/G Family Logo (trns).png" alt="G Family Logo">
                     </a>
                 </div>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="merch.html">Merch</a></li>
                 <li><a href="contacts.html">Contact</a></li>
+                <div class="language-menu">
+                    <a href="#" id="current-language" aria-label="Current language">
+                        <span class="fi fi-gb"></span> EN
+                    </a> <!-- Default Flag (USA) -->
+                    <div class="language-menu-content">
+                        <a href="javascript:void(0);" onclick="changeLanguage('en')"><span class="fi fi-gb"></span> EN</a>
+                        <a href="javascript:void(0);" onclick="changeLanguage('es')"><span class="fi fi-es"></span> ES</a>
+                        <a href="javascript:void(0);" onclick="changeLanguage('ja')"><span class="fi fi-jp"></span> JA</a>
+                        <a href="javascript:void(0);" onclick="changeLanguage('tl')"><span class="fi fi-ph"></span> TL</a>
+                    </div>
+                </div>                
             </ul>
         </nav>
     </header>
 
     <section class="about">
-        <h1>About G Family</h1>
-        <p>G Family is a group that brings together diverse musical talents to create a unique sound. Our journey started with a shared passion for music and a dream to make a difference through our talents. With a fusion of different genres, our music speaks to the heart and soul. Join us as we share our story and continue to grow with our fans.
-        </p>
-        <p>Our mission is to inspire, connect, and create lasting memories with our music.</p>
+        <h1 id="about-title">About G Family</h1>
+        <p id="about-desc">G Family is a group that brings together diverse musical talents to create a unique sound. Our journey started with a shared passion for music and a dream to make a difference through our talents. With a fusion of different genres, our music speaks to the heart and soul. Join us as we share our story and continue to grow with our fans.</p>
+        <p id="about-mission">Our mission is to inspire, connect, and create lasting memories with our music.</p>
     </section>
 
     <section id="artists">
-        <h2>Artists</h2>
+        <h2 id="artists-title">Artists</h2>
         <div class="artist-container">
             <div class="artist first">
                 <div class="artist-photo">
@@ -59,55 +70,75 @@
             </div>
         </div>
     </section>
-    
-    
-    <script>
-        // Get the button
-        let backToTopButton = document.getElementById('backToTop');
-        
-        // Show the button when the user scrolls down 200px from the top
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
-        
-        // When the user clicks the button, scroll to the top
-        backToTopButton.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"  // Smooth scroll effect
-            });
-        };
-        </script>
-        
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Scroll to Top Example</title>
-            <link rel="stylesheet" href="css/style.css">
-        </head>
-        <body>
-            <!-- Your page content goes here -->
-        
-            <!-- Scroll to Top Button -->
-            <button id="scrollToTopBtn" title="Go to top">↑</button>
-        
-            <script src="js/script.js"></script>
-        </body>
-        </html>
-        
-
-        
-    
-    
 
     <footer>
-        <p>&copy; 2025 G Family. All rights reserved.</p>
+        <p id="footer-text">&copy; 2025 G Family. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                aboutTitle: "About G Family",
+                aboutDesc: "G Family is a group that brings together diverse musical talents to create a unique sound...",
+                aboutMission: "Our mission is to inspire, connect, and create lasting memories with our music.",
+                artistsTitle: "Artists",
+                footerText: "© 2025 G Family. All rights reserved.",
+                languageText: "EN",
+                flagIcon: "fi-gb"
+            },
+            es: {
+                aboutTitle: "Acerca de G Family",
+                aboutDesc: "G Family es un grupo que reúne diversos talentos musicales para crear un sonido único...",
+                aboutMission: "Nuestra misión es inspirar, conectar y crear recuerdos duraderos con nuestra música.",
+                artistsTitle: "Artistas",
+                footerText: "© 2025 G Family. Todos los derechos reservados.",
+                languageText: "ES",
+                flagIcon: "fi-es"
+            },
+            ja: {
+                aboutTitle: "G Familyについて",
+                aboutDesc: "G Familyは、ユニークなサウンドを作り出すために多様な音楽的才能を集めたグループです...",
+                aboutMission: "私たちの使命は、音楽を通じてインスピレーションを与え、つながりを作り、永続的な思い出を創造することです。",
+                artistsTitle: "アーティスト",
+                footerText: "© 2025 G Family. すべての権利を保有",
+                languageText: "JA",
+                flagIcon: "fi-jp"
+            },
+            tl: {
+                aboutTitle: "Tungkol sa G Family",
+                aboutDesc: "Ang G Family ay isang grupo na nagdadala ng iba't ibang musikal na talento upang lumikha ng isang natatanging tunog...",
+                aboutMission: "Ang aming misyon ay magbigay ng inspirasyon, kumonekta, at lumikha ng mga walang hanggang alaala sa pamamagitan ng aming musika.",
+                artistsTitle: "Mga Artista",
+                footerText: "© 2025 G Family. Lahat ng karapatan ay nakalaan.",
+                languageText: "TL",
+                flagIcon: "fi-ph"
+            }
+        };
+
+        // Function to set the language
+        function setLanguage(lang) {
+            const content = translations[lang];
+            if (content) {
+                document.getElementById("about-title").innerText = content.aboutTitle;
+                document.getElementById("about-desc").innerText = content.aboutDesc;
+                document.getElementById("about-mission").innerText = content.aboutMission;
+                document.getElementById("artists-title").innerText = content.artistsTitle;
+                document.getElementById("footer-text").innerText = content.footerText;
+                document.getElementById("current-language").innerHTML = `<span class="fi ${content.flagIcon}"></span> ${content.languageText}`;
+            }
+        }
+
+        // Function to handle language change
+        function changeLanguage(lang) {
+            setLanguage(lang);
+            window.location.search = `?lang=${lang}`;
+        }
+
+        // Check if language is set in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en'; // Default to English if no language is specified
+        setLanguage(lang);
+    </script>
 </body>
 </html>

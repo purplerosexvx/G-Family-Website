@@ -1,8 +1,53 @@
-
 nav ul li.special a {
     font-family: 'PP Right Gothic', sans-serif;
     color: #ff7300;
     text-shadow: 0px 0px 5px #ffb300, 0px 0px 10px #cc9600, 0px 0px 20px #885600;
+}
+
+/* Language Menu Dropdown with Flag Icons */
+.language-menu {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: inline-block;
+    z-index: 20;
+    cursor: pointer; /* Makes the dropdown feel clickable */
+}
+
+.language-menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px; /* Optional: Makes the dropdown slightly rounded */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.language-menu:hover .language-menu-content {
+    display: block;
+    opacity: 1; /* Ensure content is visible */
+}
+
+.language-menu-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Makes it clear that the menu items are clickable */
+}
+
+.language-menu-content a:hover {
+    background-color: #ddd;
+}
+
+/* Flag icon styling */
+.flag-icon {
+    margin-right: 8px;
+    width: 20px; /* Ensure consistent flag icon size */
+    height: 14px;
 }
 
 /* About Section Styling */
@@ -92,7 +137,6 @@ nav ul li.special a {
     flex-direction: row-reverse;
 }
 
-
 /* Scroll to Top Button Styling */
 #scrollToTopBtn {
     position: fixed;
@@ -132,5 +176,11 @@ nav ul li.special a {
 
     .about p {
         font-size: 16px;
+    }
+
+    /* Adjust the position of the language menu for smaller screens */
+    .language-menu {
+        left: 10px;
+        top: 10px;
     }
 }
