@@ -18,11 +18,11 @@
             <ul>
                 <!-- Language Menu Dropdown with Flag Icons on the left -->
                 <div class="language-menu">
-                    <a href="#"><span class="fi fi-gb"></span></a> <!-- Default Flag (USA) -->
+                    <a href="#" id="current-language"><span class="fi fi-gb"></span> EN</a> <!-- Default Flag (USA) -->
                     <div class="language-menu-content">
-                        <a href="?lang=en"><span class="fi fi-gb"></span>EN</a> <!-- English -->
-                        <a href="?lang=es"><span class="fi fi-es"></span>ES</a> <!-- Spanish -->
-                        <a href="?lang=ja"><span class="fi fi-jp"></span>JA</a> <!-- Japanese -->
+                        <a href="?lang=en" onclick="changeLanguage('en'); return false;"><span class="fi fi-gb"></span>EN</a> <!-- English -->
+                        <a href="?lang=es" onclick="changeLanguage('es'); return false;"><span class="fi fi-es"></span>ES</a> <!-- Spanish -->
+                        <a href="?lang=ja" onclick="changeLanguage('ja'); return false;"><span class="fi fi-jp"></span>JA</a> <!-- Japanese -->
                     </div>
                 </div>                
                 <li class="special"><a href="about.html">Home</a></li>
@@ -50,37 +50,53 @@
     </footer>
 
     <script>
-        const translations = {
-            en: {
-                heroTitle: "Experience the Best",
-                listenNowBtn: "Listen Now",
-                footerText: "© 2025 G Family. All rights reserved."
-            },
-            es: {
-                heroTitle: "Experimenta lo Mejor",
-                listenNowBtn: "Escuchar Ahora",
-                footerText: "© 2025 G Family. Todos los derechos reservados."
-            },
-            ja: {
-                heroTitle: "最高を体験",
-                listenNowBtn: "今すぐ聴く",
-                footerText: "© 2025 G Family. すべての権利を保有"
-            }
-        };
-
-        function setLanguage(lang) {
-            const content = translations[lang];
-            if (content) {
-                document.getElementById("hero-title").innerText = content.heroTitle;
-                document.getElementById("listen-now-btn").innerText = content.listenNowBtn;
-                document.getElementById("footer-text").innerText = content.footerText;
-            }
+    // Language translations
+    const translations = {
+        en: {
+            heroTitle: "Experience the Best",
+            listenNowBtn: "Listen Now",
+            footerText: "© 2025 G Family. All rights reserved.",
+            languageText: "EN",
+            flagIcon: "fi-gb"
+        },
+        es: {
+            heroTitle: "Experimenta lo Mejor",
+            listenNowBtn: "Escuchar Ahora",
+            footerText: "© 2025 G Family. Todos los derechos reservados.",
+            languageText: "ES",
+            flagIcon: "fi-es"
+        },
+        ja: {
+            heroTitle: "最高を体験",
+            listenNowBtn: "今すぐ聴く",
+            footerText: "© 2025 G Family. すべての権利を保有",
+            languageText: "JA",
+            flagIcon: "fi-jp"
         }
+    };
 
-        // Get language from the URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || 'en'; // Default to English if no language is specified
+    // Function to set the language
+    function setLanguage(lang) {
+        const content = translations[lang];
+        if (content) {
+            document.getElementById("hero-title").innerText = content.heroTitle;
+            document.getElementById("listen-now-btn").innerText = content.listenNowBtn;
+            document.getElementById("footer-text").innerText = content.footerText;
+            document.getElementById("current-language").innerHTML = `<span class="fi ${content.flagIcon}"></span> ${content.languageText}`;
+        }
+    }
+
+    // Function to handle language change
+    function changeLanguage(lang) {
         setLanguage(lang);
+        // Update the URL to reflect the selected language
+        window.location.search = `?lang=${lang}`;
+    }
+
+    // Check if language is set in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'en'; // Default to English if no language is specified
+    setLanguage(lang);
     </script>
 </body>
 </html>
