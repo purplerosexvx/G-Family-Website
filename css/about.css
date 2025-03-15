@@ -137,6 +137,33 @@ nav ul li.special a {
     flex-direction: row-reverse;
 }
 
+.glow {
+    font-family: 'Old English Five', serif;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease-in-out;
+}
+.glow:hover {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff7300, 0 0 30px #ff8400;
+}
+.separator {
+    width: 50%;
+    height: 4px;
+    background: #ff7300;
+    box-shadow: 0px 0px 10px orange;
+    margin: 30px auto;
+    border-radius: 2px;
+}
+.social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: orange;
+}
 /* Scroll to Top Button Styling */
 #scrollToTopBtn {
     position: fixed;

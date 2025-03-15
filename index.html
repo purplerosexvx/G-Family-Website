@@ -4,115 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G Family</title>
+    
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/pp-right-gothic" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/helvair-graffiti" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Flag Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
-    <link href="https://fontmeme.com/jfont/hangyaku-font/" rel="stylesheet">
 
-    <!-- Flag Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.6.0/css/flag-icon.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <!-- Language Menu Dropdown with Flag Icons on the left -->
+                <!-- Language Menu -->
                 <div class="language-menu">
-                    <a href="#" id="current-language"><span class="fi fi-gb"></span> EN</a> <!-- Default Flag (USA) -->
+                    <a href="#" id="current-language"><span class="fi fi-gb"></span> EN</a>
                     <div class="language-menu-content">
-                        <a href="?lang=en" onclick="changeLanguage('en'); return false;"><span class="fi fi-gb"></span>EN</a> <!-- English -->
-                        <a href="?lang=es" onclick="changeLanguage('es'); return false;"><span class="fi fi-es"></span>ES</a> <!-- Spanish -->
-                        <a href="?lang=ja" onclick="changeLanguage('ja'); return false;"><span class="fi fi-jp"></span>JA</a> <!-- Japanese -->
+                        <a href="?lang=en" onclick="changeLanguage('en'); return false;"><span class="fi fi-gb"></span> EN</a>
+                        <a href="?lang=es" onclick="changeLanguage('es'); return false;"><span class="fi fi-es"></span> ES</a>
+                        <a href="?lang=ja" onclick="changeLanguage('ja'); return false;"><span class="fi fi-jp"></span> JA</a>
+                        <a href="?lang=tl" onclick="changeLanguage('tl'); return false;"><span class="fi fi-ph"></span> TL</a>
                     </div>
                 </div>                
-                <li class="special"><a href="about.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="music.html">Music</a></li>
+
+                <!-- Navigation Links -->
+                <li class="special"><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="about.html" id="about-link">About</a></li>
+                <li><a href="music.html" id="music-link">Music</a></li>
+                
+                <!-- Logo in Center -->
                 <div class="logo">
-                    <img src="images/transparent.png" alt="Your Band Logo">
+                    <img src="images/transparent.png" alt="G Family Logo">
                 </div>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="merch.html">Merch</a></li>
-                <li><a href="contacts.html">Contact</a></li>
+
+                <li><a href="events.html" id="events-link">Events</a></li>
+                <li><a href="merch.html" id="merch-link">Merch</a></li>
+                <li><a href="contacts.html" id="contact-link">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="logo">
-            <img src="images/G Family Logo (trns).png" alt="Your Band Logo" />
+            <img src="images/G Family Logo (trns).png" alt="G Family Logo">
         </div>
         <h1 id="hero-title">Experience the Best</h1>
         <a href="#music" class="btn" id="listen-now-btn">Listen Now</a>
     </section>
-    
+
+    <!-- Latest News Section -->
+    <div class="separator"></div>
+    <section class="latest-news">
+        <h2>Latest News</h2>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="images/wp4020129-dedsec-wallpapers.jpg" alt="News 1">
+                <p>New Album XXX is out now!</p>
+            </div>
+            <div class="news-item">
+                <img src="images/wp4020128-dedsec-wallpapers.jpg" alt="News 2">
+                <p>2025 tour dates announced!</p>
+            </div>
+        </div>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Footer -->
     <footer>
+        <div class="footer-logo" onclick="scrollToTop()">
+            <span class="glow">G</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
         <p id="footer-text">&copy; 2025 G Family. All rights reserved.</p>
     </footer>
-    
-    <style>
-        /* Apply Hangyaku font to all Japanese text or specific sections */
-        .japanese-text {
-            font-family: 'Hangyaku Font', sans-serif;
-        }
-    </style>
 
+    <!-- Scroll to Top Script -->
     <script>
-    // Language translations
-    const translations = {
-        en: {
-            heroTitle: "Experience the Best",
-            listenNowBtn: "Listen Now",
-            footerText: "© 2025 G Family. All rights reserved.",
-            languageText: "EN",
-            flagIcon: "fi-gb"
-        },
-        es: {
-            heroTitle: "Experimenta lo Mejor",
-            listenNowBtn: "Escuchar Ahora",
-            footerText: "© 2025 G Family. Todos los derechos reservados.",
-            languageText: "ES",
-            flagIcon: "fi-es"
-        },
-        ja: {
-            heroTitle: "最高を体験",
-            listenNowBtn: "今すぐ聴く",
-            footerText: "© 2025 G Family. すべての権利を保有",
-            languageText: "JA",
-            flagIcon: "fi-jp"
-        }
-    };
-
-    // Function to set the language
-    function setLanguage(lang) {
-        const content = translations[lang];
-        if (content) {
-            document.getElementById("hero-title").innerText = content.heroTitle;
-            document.getElementById("listen-now-btn").innerText = content.listenNowBtn;
-            document.getElementById("footer-text").innerText = content.footerText;
-            document.getElementById("current-language").innerHTML = `<span class="fi ${content.flagIcon}"></span> ${content.languageText}`;
-
-       // Apply Japanese font if the language is Japanese
-       if (lang === "ja") {
-                    document.body.style.fontFamily = "'hangyaku-font', sans-serif";
-                } else {
-                    document.body.style.fontFamily = "'Arial', sans-serif"; // Default font
-                }
-            }
-        }
-
-    // Function to handle language change
-    function changeLanguage(lang) {
-        setLanguage(lang);
-        // Update the URL to reflect the selected language
-        window.location.search = `?lang=${lang}`;
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    // Check if language is set in the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || 'en'; // Default to English if no language is specified
-    setLanguage(lang);
     </script>
 </body>
 </html>
