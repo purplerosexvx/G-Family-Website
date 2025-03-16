@@ -53,10 +53,28 @@
             </div>
         </div>
     </section>
+
+    <div class="separator"></div>
     
 
     <footer>
-        <p>&copy; 2025 G Family. All rights reserved.</p>
+        <div class="footer-logo" onclick="scrollToTop()">
+            <span class="glow">G</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p id="footer-text">&copy; 2025 G Family. All rights reserved.</p>
     </footer>
+    
+    <!-- Scroll to Top Script -->
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
 </body>
 </html>

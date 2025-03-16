@@ -52,15 +52,24 @@
         </form>
     </section>
 
-    <!-- Social Media Icons (now above the footer) -->
-    <div class="socials-footer">
-        <a href="#" class="social-icon"><img src="images/8547041_tiktok_icon.png" alt="TikTok"></a>
-        <a href="#" class="social-icon"><img src="images/1159683_instagram_instagram logo_icon.png" alt="Instagram"></a>
-        <a href="#" class="social-icon"><img src="images/11244080_x_twitter_elon musk_twitter new logo_icon.png" alt="Twitter"></a>
-    </div>
-
     <footer>
-        <p>&copy; 2025 G Family. All rights reserved.</p>
+        <div class="footer-logo" onclick="scrollToTop()">
+            <span class="glow">G</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p id="footer-text">&copy; 2025 G Family. All rights reserved.</p>
     </footer>
+    
+    <!-- Scroll to Top Script -->
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
 </body>
 </html>
